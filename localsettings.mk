@@ -24,7 +24,26 @@
 BOOSTINCLDIR=/usr/include/boost
 BOOSTDIR=/usr/include/boost
 
-ifneq "$(wildcard /Users/benjaminbrooks/Applications/IBM/ILOG/CPLEX_Studio1262/cplex/bin/x86-64_osx/cplex )" "" 
+ifneq "$(wildcard /mnt/c/Users/Isaac/econ/BCESolve-master )" ""
+ $(info Compiling on Alexanders windows laptop)
+
+ GRBDIR=/mnt/c/Users/Isaac/apps/gurobi702/linux64
+ GRBINCLDIR=$(GRBDIR)\include
+ GRBLIBDIR=$(GRBDIR)\lib
+ GRBNAME=gurobi70
+
+BOOSTINCLDIR=/usr/include/boost
+BOOSTDIR=/usr/lib/x86_64-linux-gnu
+
+ STATIC=-Wl,-Bstatic
+ DYNAMIC=-Wl,-Bdynamic
+
+ CXX=g++
+ RMCMD=del
+
+endif
+
+ifneq "$(wildcard /Users/benjaminbrooks/Applications/IBM/ILOG/CPLEX_Studio1262/cplex/bin/x86-64_osx/cplex )" ""
  $(info Compiling on Bens macbook pro)
 
  GRBDIR=/Library/gurobi650/mac64
@@ -40,9 +59,9 @@ ifneq "$(wildcard /Users/benjaminbrooks/Applications/IBM/ILOG/CPLEX_Studio1262/c
 
  CXX=clang++ -O0
 
- RMCMD=rm -rf 
+ RMCMD=rm -rf
 endif
-ifneq "$(wildcard /opt/gurobi751/linux64/bin/grbgetkey )" "" 
+ifneq "$(wildcard /opt/gurobi751/linux64/bin/grbgetkey )" ""
  $(info Compiling on Bens desktop)
 
  GRBDIR=/opt/gurobi751/linux64
@@ -57,9 +76,9 @@ ifneq "$(wildcard /opt/gurobi751/linux64/bin/grbgetkey )" ""
  BOOSTDIR=/usr/lib64/
 
  CXX=g++
- RMCMD=rm -rf 
+ RMCMD=rm -rf
 endif
-ifneq "$(wildcard C:\Users\babrooks\ )" "" 
+ifneq "$(wildcard C:\Users\babrooks\ )" ""
  $(info Compiling on Bens windows laptop)
 
  GRBDIR=C:\gurobi652\win32
@@ -74,7 +93,7 @@ ifneq "$(wildcard C:\Users\babrooks\ )" ""
  DYNAMIC=-Wl,-Bdynamic
 
  CXX=g++
- RMCMD=del 
+ RMCMD=del
 
 endif
 ifneq "$(wildcard /opt/ibm/ILOG/CPLEX_Enterprise_Server1262/CPLEX_Studio/cplex/bin/x86-64_linux/cplex )" ""
@@ -87,7 +106,7 @@ ifneq "$(wildcard /opt/ibm/ILOG/CPLEX_Enterprise_Server1262/CPLEX_Studio/cplex/b
  DYNAMIC=-Wl,-Bdynamic
 
  CXX=g++
- RMCMD=rm -rf 
+ RMCMD=rm -rf
 endif
 
 # General settings
