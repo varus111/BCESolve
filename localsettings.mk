@@ -25,7 +25,7 @@ BOOSTINCLDIR=/usr/include/boost
 BOOSTDIR=/usr/include/boost
 
 ifneq "$(wildcard /mnt/c/Users/Isaac/econ/BCESolve-master )" ""
- $(info Compiling on Alexanders windows laptop)
+ $(info Compiling on Alexanders old laptop)
 
  GRBDIR=/mnt/c/Users/Isaac/apps/gurobi702/linux64
  GRBINCLDIR=$(GRBDIR)\include
@@ -34,6 +34,27 @@ ifneq "$(wildcard /mnt/c/Users/Isaac/econ/BCESolve-master )" ""
 
 BOOSTINCLDIR=/usr/include/boost
 BOOSTDIR=/usr/lib/x86_64-linux-gnu
+
+ STATIC=-Wl,-Bstatic
+ DYNAMIC=-Wl,-Bdynamic
+
+ CXX=g++
+ RMCMD=del
+
+endif
+
+ifneq "$(wildcard /mnt/c/Users/alexa/econ/BCESolve-master )" ""
+ $(info Compiling on Alexanders Laptop 2, Electric Boogaloo)
+
+ GRBDIR=/mnt/c/Users/alexa/apps/gurobi810/linux64
+ GRBINCLDIR=$(GRBDIR)\include
+ GRBLIBDIR=$(GRBDIR)\lib
+ GRBNAME=gurobi81
+
+#BOOSTINCLDIR=/mnt/c/Users/alexa/apps/boost_1_67_0
+#BOOSTDIR=/mnt/c/Users/alexa/apps/boost_1_67_0/stage/lib
+BOOSTINCLDIR=/usr/local/include
+BOOSTDIR=/usr/local/lib
 
  STATIC=-Wl,-Bstatic
  DYNAMIC=-Wl,-Bdynamic
