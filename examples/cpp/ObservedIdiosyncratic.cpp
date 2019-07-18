@@ -20,8 +20,8 @@
 // ben@benjaminbrooks.net
 // Chicago, IL
 
-// First price auction with private values
-// BAB 11-3-2012
+// Observed Idiosyncratic 
+// AH 7-17-2019
 
 #include "ObservedIdiosyncratic.hpp"
 

@@ -20,7 +20,9 @@
 // ben@benjaminbrooks.net
 // Chicago, IL
 
-//! @example
+// Header file for Observed Idiosyncratic
+// AH 7-17-2019
+
 #ifndef OI_HPP
 #define OI_HPP
 
