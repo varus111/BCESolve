@@ -21,11 +21,19 @@
 # Chicago, IL
 
 exists(/mnt/c/Users/Isaac/econ/BCESolve-master) {
-message("QMAKE run on Alexanders laptop...")
+message("QMAKE run on Alexander's old laptop...")
 
 GRBDIR=/mnt/c/Users/Isaac/apps/gurobi702/linux64
 GRBNAME=gurobi70
+} # Alexander's old laptop
+
+exists(/mnt/c/Users/alexa/econ/BCESolve-master) {
+message("QMAKE run on Alexander's Laptop 2, Electric Boogaloo...")
+
+GRBDIR=/mnt/c/Users/alexa/apps/gurobi810/linux64
+GRBNAME=gurobi81
 } # Alexander's laptop
+
 
 exists(/opt/gurobi751/linux64/bin/grbgetkey) {
 message("QMAKE run on Ben's desktop...")
