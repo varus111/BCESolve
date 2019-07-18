@@ -20,7 +20,7 @@
 # ben@benjaminbrooks.net
 # Chicago, IL
 
-exists(/mnt/c/Users/Isaac/econ/BCESolve-master) {
+exists(/mnt/c/Users/Isaac/econ/BCESolve) {
 message("QMAKE run on Alexander's old laptop...")
 
 GRBDIR=/mnt/c/Users/Isaac/apps/gurobi702/linux64

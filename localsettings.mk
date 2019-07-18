@@ -24,7 +24,7 @@
 BOOSTINCLDIR=/usr/include/boost
 BOOSTDIR=/usr/include/boost
 
-ifneq "$(wildcard /mnt/c/Users/Isaac/econ/BCESolve-master )" ""
+ifneq "$(wildcard /mnt/c/Users/Isaac/econ/BCESolve )" ""
  $(info Compiling on Alexanders old laptop)
 
  GRBDIR=/mnt/c/Users/Isaac/apps/gurobi702/linux64
