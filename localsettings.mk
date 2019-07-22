@@ -43,7 +43,7 @@ BOOSTDIR=/usr/lib/x86_64-linux-gnu
 
 endif
 
-ifneq "$(wildcard /mnt/c/Users/alexa/econ/BCESolve-master )" ""
+ifneq "$(wildcard /mnt/c/Users/alexa/econ/BCESolve )" ""
  $(info Compiling on Alexanders Laptop 2, Electric Boogaloo)
 
  GRBDIR=/mnt/c/Users/alexa/apps/gurobi810/linux64
