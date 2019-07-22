@@ -27,7 +27,7 @@ GRBDIR=/mnt/c/Users/Isaac/apps/gurobi702/linux64
 GRBNAME=gurobi70
 } # Alexander's old laptop
 
-exists(/mnt/c/Users/alexa/econ/BCESolve-master) {
+exists(/mnt/c/Users/alexa/econ/BCESolve) {
 message("QMAKE run on Alexander's Laptop 2, Electric Boogaloo...")
 
 GRBDIR=/mnt/c/Users/alexa/apps/gurobi810/linux64
