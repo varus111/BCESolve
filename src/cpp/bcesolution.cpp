@@ -270,7 +270,7 @@ double BCESolution::getConstraintMultipliers(int player, int action, int type,
         flag++;
     }
     map<int,double>::const_iterator it = equilibria[currentEquilibrium].multipliers.find(flag);
-    for (int k = mc; k < mc + game.getNumActions()[player]; ++k)
+    for (int k = flag; k < mc + game.getNumActions()[player]; ++k) 
     {
         if (equilibria[currentEquilibrium].multipliers.count(k) < 1)
         {

@@ -228,7 +228,7 @@ void BCESolver::populate ()
 
   // IC constraints
   numICConstraints = vector<int>(2,0);
-  int globalICCounter=0;
+  int globalICCounter=-1;
   nonZeroICConstraintLocations.clear();
   for (player=0; player<numPlayers; player++)
     {
