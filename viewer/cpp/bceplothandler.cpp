@@ -131,32 +131,6 @@ void BCEPlotHandler::setupLayout() {
         SIGNAL(devPlotPrChange(int,double)),
         devPlotTitles[player],
         SLOT(changeProbability(int,double)));
-        // deviationBarGraphs[2] = new BCEValueSetPlot();
-        // deviationBarGraphs[2]->setSizePolicy(sp);
-        // deviationBarGraphs[2]->xAxis->setLabel("Player 0's Actions");
-        // deviationBarGraphs[3] = new BCEValueSetPlot();
-        // deviationBarGraphs[3]->setSizePolicy(sp);
-        // deviationBarGraphs[3]->xAxis->setLabel("Player 1's Actions");
-        // for (int player = 0; player < 2; player++) {
-        //   deviationBarGraphs[player+2]->yAxis->setLabel("Multiplier");
-        //   devPlotTitles[player+2] = new BCEPlotTitle(DeviationPlot,
-      	// 				     player+2,
-      	// 				     deviationBarGraphs[player+2]);
-        //   devPlotTitles[player+2]->setFont(font);
-        //
-        //   deviationBarGraphs[player+2]->plotLayout()->insertRow(0);
-        //   deviationBarGraphs[player+2]->
-        //     plotLayout()->
-        //     addElement(0,0,devPlotTitles[player+2]);
-        //
-        //   connect(guiData,
-      	//     SIGNAL(devPlotTitleChange(int,int,int,double)),
-      	//     devPlotTitles[player+2],
-      	//     SLOT(changeText(int,int,int,double)));
-        //   connect(guiData,
-      	//     SIGNAL(devPlotPrChange(int,double)),
-      	//     devPlotTitles[player+2],
-      	//     SLOT(changeProbability(int,double)));
   }
 
   QSizePolicy sp2(QSizePolicy::Expanding,QSizePolicy::Expanding);
@@ -191,8 +165,8 @@ void BCEPlotHandler::setupLayout() {
   ObjectiveTabWidget->setLayout(ObjectiveTabDivide);
   MultiplierTabWidget->setLayout(MultiplierTabDivide);
 
-  TabWidget->addTab(ObjectiveTabWidget,"Objectives");
-  TabWidget->addTab(MultiplierTabWidget,"Multipliers");
+  TabWidget->addTab(ObjectiveTabWidget,"Deviation Payoffs");
+  TabWidget->addTab(MultiplierTabWidget,"I.C. Multipliers");
   leftSectorDivide->addWidget(TabWidget);//
 
   // Right Viewer Panel, Conditional-Marginal Distribution
